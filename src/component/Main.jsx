@@ -56,46 +56,46 @@ export default function Main() {
         setInputValue(e.target.value)
         if (e.key === 'Enter' && forthWall && e.target.value === "north") {
             setState("maybe do nothing?")
-            e.target.value = "";
+            setInputValue("");
             setInstruction("whoops")
             setSelfAware("oh...the bear is gone...uhhh...maybe just don't do anything...I haven't planned this far ahead yet")
         }
         if (e.key === 'Enter' && e.target.value === "help") {
             setState(helpScreen)
-            e.target.value = ""; 
+            setInputValue("");
             setInstruction("") 
             setSelfAware("") 
         } if (e.key === 'Enter' && e.target.value === "north") {
             setState(goNorth)
-            e.target.value = ""; 
+            setInputValue(""); 
             setInstruction("GAME OVER " + "type 'restart' to try again")
             setSelfAware("")
         } if (e.key === 'Enter' && e.target.value === "inventory") {
-            e.target.value = "";
+            setInputValue("");
             setInstruction(`you check your pockets and find: ${inventory}`)
             setSelfAware("")
         } if (e.key === 'Enter' && e.target.value === "restart") {
             setState(storyBoardContent);
-            e.target.value ="";
+            setInputValue("");
             setInstruction("")
             setSelfAware("Hey there...Welcome back to the land of the living...what will you do differently this time I wonder...");
             setForthWall(true);
             setInventory(["an old lighter"])
             } if (e.key === 'Enter' && e.target.value === "use old lighter") {
             setState("You attempt to spark the lighter but it crumbles apart in your hand...almost as if it never even existed...")
-            e.target.value ="";
+            setInputValue("");
             setInstruction("way to go...now we have NOTHING")
             setInventory (["nothing but lint"])
         } if (e.key === 'Enter' && e.target.value === "do nothing") {
             setState("YOU WON!!!!")
-            e.target.value = "you lazy jerk ಠ_ಠ"
+            setInputValue("you lazy jerk ಠ_ಠ")
             setInstruction("🎈🎈🎈🎈🎈🎈")
             setSelfAware("oh...okay...cool...you do you")
         } if (e.key === 'Enter' && e.target.value === "use lint") {
             setState("You can't do that");
             setSelfAware("Come on now...");
             setInstruction("That's what you're trying to do?")
-            e.target.value = "seriously???"
+            setInputValue("seriously???")
         }
     }
 
