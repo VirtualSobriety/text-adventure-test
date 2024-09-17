@@ -3,9 +3,8 @@
 } */
 
 :root {
-  --foreground: darkgreen;
+  --foreground: green;
   --background: black;
-
 }
 
 body {
@@ -14,7 +13,6 @@ body {
   color: var(--foreground);
   font-size: 20px;
   font-family: monospace;
-  
 }
 
 input {
@@ -29,7 +27,6 @@ input {
   /* height: 15vh; */
 }
 
-
 .cursor-container {
   position: absolute;
   left: 5px;
@@ -38,18 +35,53 @@ input {
 }
 
 .typing-effect {
-    position:relative;
-  }
-  
-  .cursor {
-    position: absolute;
-    display: inline-block;
-    border: solid 1px var(--foreground);
-    min-height: 20px;
-    background-color: var(--foreground);
-  }
+  position: relative;
+}
 
-  .cursor.hidden {
-    opacity: 0.3;
-  }
-  
+.cursor {
+  position: absolute;
+  display: inline-block;
+  border: solid 1px var(--foreground);
+  min-height: 20px;
+  background-color: var(--foreground);
+}
+
+.cursor.hidden {
+  opacity: 0.3;
+}
+
+.first-text-content {
+  color: rgba(251, 251, 4, 0.713);
+}
+
+.picture-for-gabby {
+  position: fixed;
+  bottom: -100%; /* Start off-screen */
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%; /* Adjust to the desired width */
+  max-width: 400px; /* Adjust to your needs */
+  transition: bottom 4.5s ease-in-out, opacity 4.5s ease-in-out;
+  opacity: 0; /* Start invisible */
+}
+
+.picture-for-gabby1 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%; /* Adjust to the desired width */
+  max-width: 250px; /* Adjust to your needs */
+  transition: opacity 5s ease-in-out;
+  opacity: -1; /* Start invisible */
+  padding-top: 51px;
+}
+.picture-for-gabby1.visible {
+  opacity: 1;
+}
+
+.picture-for-gabby.visible {
+  bottom: 185px; /* Slide up to this position */
+  opacity: 1; /* Fade in */
+}
