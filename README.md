@@ -1,8 +1,3 @@
-# React + Vite
+React - text adventure test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I have recently started learning React and I always wanted to make some kind of game. I figured making a text adventure game with React would be a great place to start! Throughout my coursework I will come back and update this app with what I have learned. Plus its also a great way to blow off steam and practice.
